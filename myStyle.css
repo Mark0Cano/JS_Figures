@@ -1,0 +1,13 @@
+/* ----Main Style ------*/
+body {
+    background-color: #1d1d1d;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+}
+
+.main {
+    width: 100%;
+}
