@@ -4,8 +4,17 @@ body {
 }
 
 .header {
+    background: linear-gradient(to right, #8E2DE2, #4A00E0);
     width: 100%;
     height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.header__h1 {
+    color:#e0e0e0;
+    font-family: 'Noto Sans JP', sans-serif;
+    
 }
 
 .main {
