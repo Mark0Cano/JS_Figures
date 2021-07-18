@@ -1,10 +1,15 @@
 /* --- Estructurando la funcion para calcular propiedades del Cuadrado */
-const squareSide = prompt("Igresa el lado");
- 
+let execute = document.getElementById("main--form--button");
+execute.addEventListener("click", squarePerimeter);
+
 function squarePerimeter (side)
 {
-    side = parseInt(squareSide);
-    return side * 4
+    const squareSide = document.getElementById("main--form--output_01");
+    side = parseInt(squareSide.value);
+    sqResult = side * 4;
+    document.getElementById("main--form__divInteractivo__input01").innerHTML = sqResult;
+    
+    console.log(sqResult);
 }
 
 function squareArea (side)
@@ -13,9 +18,5 @@ function squareArea (side)
     return side ** 2
 }
 
-const squareResultA = squarePerimeter();
-const squareResultB = squareArea();
-alert(squareResultA);
-alert(squareResultB);
 
 /* --- Estructurando la funcion para calcular propiedades del Triánguño */

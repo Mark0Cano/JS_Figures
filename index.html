@@ -12,12 +12,27 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="header__h1">Geometric Calculator, aqui todo parece estar normal</h1>
+        <h1 class="header__h1">Geometric Calculator</h1>
         <div class="header__flyer"></div>
     </header>
     <section class="main">
-        <h2>Selecciona tu figura favorita</h2>
-        <p>Muy bien has elegido: <p class="main--parrafoInteractivo"></p></p>
+        <div class="main__container">
+            <h2>Selecciona tu figura favorita</h2>
+            <p>Muy bien has elegido: <p class="container--parrafoInteractivo"></p></p>
+            <form class="main--form">
+                <label for="">Porfavor introduce la longitud de un lado de tu cuadrado</label>
+                <input id="main--form--output_01" type="text">
+                <button id="main--form--button" value="Calcular" type="button">Clacular</button>
+                <h3>Características</h3>
+                <div class="main--form__divInteractivo">
+                    <p>Este valor corresponde al Perímetro de tu cuadrado</p><br>
+                    <div id="main--form__divInteractivo__input01"></div>
+                    <br>
+                    <p>Este valor corresponde al Área de tu cuadrado</p><br>
+                    <div class="main--form__divInteractivo__input01"></div>
+                </div>
+            </form>
+        </div>
     </section>
     <footer class="footer">
         <h4 class="footer__h4">This site was created by Mark :3</h4>
