@@ -2,6 +2,7 @@
 body {
     background-color: #1d1d1d;
     font-family: 'Noto Sans JP', sans-serif; 
+    margin: 0;
 }
 
 .header {
@@ -31,6 +32,7 @@ body {
     height: 600px;
     background-color: rgb(0, 189, 179);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -44,10 +46,35 @@ body {
     box-shadow: black;
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
+}
+
+#main--form_sqr {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    margin-top: 800px;
+    transition: 500ms;
+}
+
+#main--form_crl {
+   display: none;
+   position: absolute;
+   opacity: 0;
+   margin-top: -300px;
+   transition: 500ms;
+}
+
+#main--form_trg {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    margin-top: -300px;
+    transition: 500ms;
 }
 
 .container--parrafoInteractivo {
-
+    color: #ff71d0;
 }
 
 .footer {

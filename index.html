@@ -16,13 +16,19 @@
         <div class="header__flyer"></div>
     </header>
     <section class="main">
+        <h2>Selecciona tu figura favorita</h2>
+        
         <div class="main__container">
-            <h2>Selecciona tu figura favorita</h2>
-            <p>Muy bien has elegido: <p class="container--parrafoInteractivo"></p></p>
-            <form class="main--form">
+            <form class="main__container--form">
+                <button class="main__form--button" id="activator_01" type="button">Cuadrado</button>
+                <button class="main__form--button" id="activator_02" type="button">Círculo</button>
+            </form>
+            <p>Muy bien has elegido: <p id="container--parrafoInteractivo"></p></p>
+            <!----          Square form          ---->
+            <form id="main--form_sqr">
                 <label for="">Porfavor introduce la longitud de un lado de tu cuadrado</label>
                 <input id="main--form--output_01" type="text">
-                <button id="main--form--button" value="Calcular" type="button">Clacular</button>
+                <button id="main--form--button_01" value="Calcular" type="button">Clacular</button>
                 <h3>Características</h3>
                 <div class="main--form__divInteractivo">
                     <p>Este valor corresponde al Perímetro de tu cuadrado</p>
@@ -30,6 +36,34 @@
                     
                     <p>Este valor corresponde al Área de tu cuadrado</p>
                     <div id="main--form__divInteractivo__input02"></div>
+                </div>
+            </form>
+            <!----          Circle form          ---->
+            <form id="main--form_crl">
+                <label for="">Porfavor introduce el radio de tu círculo</label>
+                <input id="main--form--output_02" type="text">
+                <button id="main--form--button_02" value="Calcular" type="button">Clacular</button>
+                <h3>Características</h3>
+                <div class="main--form__divInteractivo">
+                    <p>Este valor corresponde a la circunferencia de tu círculo</p>
+                    <div id="main--form__divInteractivo__input03"></div>
+                    
+                    <p>Este valor corresponde al Área de tu cuadrado</p>
+                    <div id="main--form__divInteractivo__input03"></div>
+                </div>
+            </form>
+            <!----          Triangle form          ---->
+            <form id="main--form_trg">
+                <label for="">Porfavor introduce la longitud de un lado de tu trinángulo</label>
+                <input id="main--form--output_02" type="text">
+                <button id="main--form--button_02" value="Calcular" type="button">Clacular</button>
+                <h3>Características</h3>
+                <div class="main--form__divInteractivo">
+                    <p>Este valor corresponde al Perímetro de tu cuadrado</p>
+                    <div id="main--form__divInteractivo__input03"></div>
+                    
+                    <p>Este valor corresponde al Área de tu cuadrado</p>
+                    <div id="main--form__divInteractivo__input03"></div>
                 </div>
             </form>
         </div>
