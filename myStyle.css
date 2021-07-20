@@ -13,6 +13,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    -webkit-box-shadow: 0px 5px 18px 0px rgba(0,0,0,0.84); 
+    box-shadow: 0px 5px 18px 0px rgba(0,0,0,0.84);
+    position: relative;
+    z-index: 2;
 }
 
 .header__h1 {
@@ -26,6 +30,7 @@ body {
     width: 100%;
     align-self: flex-end;
     margin: 0px;
+    margin-bottom: -5px;
 }
 
 .main {
@@ -67,26 +72,53 @@ body {
     width: 90px;
 }
 
+.main__form--button_2 {
+    background-color: #8a1bcf;
+    border: 0;
+    height: 30px;
+    color: #dfdfdf;
+}
+
+.main__form--input {
+    background: transparent;
+    border: none;
+    height: 30px;
+    outline: none;
+    color: turquoise;
+    border-radius: 5px;
+    text-indent: 20px;
+}
+
+.main__form--input:focus {
+    background-color: rgba(255, 255, 255, .1);
+}
+
 #main--form_sqr {
     position: absolute;
     opacity: 0;
     margin-top: 200px;
-    transition: 500ms;
+    transition: 350ms;
 }
 
 #main--form_crl {
-   display: none;
    position: absolute;
    opacity: 0;
-   margin-top: -300px;
-   transition: 500ms;
+   margin-top: 200px;
+   transition: 350ms;
 }
 
 #main--form_trg {
     position: absolute;
     opacity: 0;
-    margin-top: 800px;
-    transition: 1200ms;
+    margin-top: 200px;
+    transition: 350ms;
+}
+
+#main--form_pgn {
+    position: absolute;
+    opacity: 0;
+    margin-top: 200px;
+    transition: 350ms;
 }
 
 .container--parrafoInteractivo {
