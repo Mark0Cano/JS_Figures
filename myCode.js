@@ -4,9 +4,8 @@ show_01.addEventListener("click", appendDisplay);
 
 function appendDisplay()
 {
-    console.log("El botoncito funciona");
     let display_01 = document.getElementById("main--form_sqr");
-    display_01.setAttribute("style", "display:block; opacity:1; margin-top: 0px;");
+    display_01.setAttribute("style", "opacity:1; margin-top: 0px;");
 
     
 }
