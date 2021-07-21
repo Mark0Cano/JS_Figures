@@ -25,74 +25,84 @@
                 <button class="main__form--button" id="activator_03" type="button">Triángulo</button>
                 <button class="main__form--button" id="activator_04" type="button">Pentágono</button>
             </form>
-            <p>Muy bien has elegido: <p id="container--parrafoInteractivo"></p></p>
-            <!----          Square form drawing         ---->
-            <div class="main__container__display">
-                <div class="display--square"></div>
-            </div>
-            <!----          Square form          ---->
-            <form id="main--form_sqr">
-                <label for="">Porfavor introduce la longitud de un lado de tu cuadrado</label>
-                <input id="main--form--output_01" type="text" class="main__form--input">
-                <button id="main--form--button_01" class="main__form--button_2" type="button">Calcular</button>
-                <h3>Características</h3>
-                <div class="main--form__divInteractivo">
-                    <p>Este valor corresponde al Perímetro de tu cuadrado</p>
-                    <div id="main--form__divInteractivo__input01"></div>
-                    
-                    <p>Este valor corresponde al Área de tu cuadrado</p>
-                    <div id="main--form__divInteractivo__input02"></div>
+            <div class="main__container__holder">   
+                <!----          Display form drawing         ---->
+                <div class="main__container__display" id="mcDisplay">
+                    <p>Muy bien has elegido: <p id="container--parrafoInteractivo"></p></p>
+                    <div class="display--square" id="squareDraw"></div>
+                    <div class="display--circle" id="circleDraw"></div>
+                    <div class="display--square"></div>
+                    <div class="display--circle"></div>
                 </div>
-            </form>
+                <!----          Square form          ---->
+                <form class="dataForm" id="main--form_sqr">
+                    <label for="">Porfavor introduce la longitud de un lado de tu cuadrado</label>
+                    <div class="dataForm__inputs">
+                        <input id="main--form--output_01" type="text" class="main__form--input">
+                        <button id="main--form--button_01" class="main__form--button_2" type="button">Calcular</button>
+                    </div>
+                    <div class="main--form__divInteractivo">
+                        <h3>Características</h3>
+                        <p>Este valor corresponde al Perímetro de tu cuadrado</p>
+                        <div id="main--form__divInteractivo__input01"></div>
+                        
+                        <p>Este valor corresponde al Área de tu cuadrado</p>
+                        <div id="main--form__divInteractivo__input02"></div>
+                    </div>
+                </form>
 
-            <!----          Circle form drawing         ---->
-            <div class="main__container__display">
-                <div class="display--circle"></div>
-            </div>
-            <!----          Circle form          ---->
-            <form id="main--form_crl">
-                <label for="">Porfavor introduce el radio de tu círculo</label>
-                <input id="main--form--output_02" type="text" class="main__form--input">
-                <button id="main--form--button_02" class="main__form--button_2" type="button">Calcular</button>
-                <h3>Características</h3>
-                <div class="main--form__divInteractivo">
-                    <p>Este valor corresponde a la circunferencia de tu círculo</p>
-                    <div id="main--form__divInteractivo__input03"></div>
-                    
-                    <p>Este valor corresponde al Área de tu círculo</p>
-                    <div id="main--form__divInteractivo__input04"></div>
-                </div>
-            </form>
-            <!----          Triangle form          ---->
-            <form id="main--form_trg">
-                <label for="">Porfavor introduce la longitud de un lado de tu trinángulo</label>
-                <input id="main--form--output_03A" type="text" class="main__form--input">
-                <label for="">Ahora introduce la medida de la base de tu trinángulo</label>
-                <input id="main--form--output_03B" type="text" class="main__form--input">
-                <button id="main--form--button_03" class="main__form--button_2" type="button">Calcular</button>
-                <h3>Características</h3>
-                <div class="main--form__divInteractivo">
-                    <p>Este valor corresponde al Perímetro de tu triángulo</p>
-                    <div id="main--form__divInteractivo__input05"></div>
-                    
-                    <p>Este valor corresponde al Área de tu triángulo</p>
-                    <div id="main--form__divInteractivo__input06"></div>
-                </div>
-            </form>
-            <!----          Pentagon form          ---->
-            <form id="main--form_pgn">
-                <label for="">Porfavor introduce la longitud de un lado de tu pentágono</label>
-                <input id="main--form--output_04" type="text" class="main__form--input">
-                <button id="main--form--button_04" class="main__form--button_2" type="button">Calcular</button>
-                <h3>Características</h3>
-                <div class="main--form__divInteractivo">
-                    <p>Este valor corresponde al Perímetro de tu pentágono</p>
-                    <div id="main--form__divInteractivo__input07"></div>
-                    
-                    <p>Este valor corresponde al Área de tu pentágono</p>
-                    <div id="main--form__divInteractivo__input08"></div>
-                </div>
-            </form>
+                <!----          Circle form          ---->
+                <form class="dataForm" id="main--form_crl">
+                    <label for="">Porfavor introduce el radio de tu círculo</label>
+                    <div class="dataForm__inputs">
+                        <input id="main--form--output_02" type="text" class="main__form--input">
+                        <button id="main--form--button_02" class="main__form--button_2" type="button">Calcular</button>
+                    </div>
+                    <div class="main--form__divInteractivo">
+                        <h3>Características</h3>
+                        <p>Este valor corresponde a la circunferencia de tu círculo</p>
+                        <div id="main--form__divInteractivo__input03"></div>
+                        
+                        <p>Este valor corresponde al Área de tu círculo</p>
+                        <div id="main--form__divInteractivo__input04"></div>
+                    </div>
+                </form>
+                <!----          Triangle form          ---->
+                <form class="dataForm" id="main--form_trg">
+                    <label for="">Porfavor los parámetros de tu triángulo</label>
+                    <div class="dataForm__inputs">
+                        <label for="">Base</label>
+                        <input id="main--form--output_03A" type="text" class="main__form--input">
+                        <label for="">Lado</label>
+                        <input id="main--form--output_03B" type="text" class="main__form--input">
+                        <button id="main--form--button_03" class="main__form--button_2" type="button">Calcular</button>
+                    </div>
+                    <div class="main--form__divInteractivo">
+                        <h3>Características</h3>
+                        <p>Este valor corresponde al Perímetro de tu triángulo</p>
+                        <div id="main--form__divInteractivo__input05"></div>
+                        
+                        <p>Este valor corresponde al Área de tu triángulo</p>
+                        <div id="main--form__divInteractivo__input06"></div>
+                    </div>
+                </form>
+                <!----          Pentagon form          ---->
+                <form class="dataForm" id="main--form_pgn">
+                    <label for="">Porfavor introduce la longitud de un lado de tu pentágono</label>
+                    <div class="dataForm__inputs">
+                        <input id="main--form--output_04" type="text" class="main__form--input">
+                        <button id="main--form--button_04" class="main__form--button_2" type="button">Calcular</button>
+                    </div>
+                    <div class="main--form__divInteractivo">
+                        <h3>Características</h3>
+                        <p>Este valor corresponde al Perímetro de tu pentágono</p>
+                        <div id="main--form__divInteractivo__input07"></div>
+                        
+                        <p>Este valor corresponde al Área de tu pentágono</p>
+                        <div id="main--form__divInteractivo__input08"></div>
+                    </div>
+                </form>
+            </div>    
         </div>
     </section>
     <footer class="footer">

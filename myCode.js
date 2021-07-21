@@ -1,10 +1,19 @@
 /* --- Trayendo el display al usuario */
+
+let figureCanvas = document.getElementById("mcDisplay");
+let figureSplash = {
+    'splash01' : document.getElementById('squareDraw'),
+    'splash02' : document.getElementById('circleDraw')
+
+};
+
 let display = {
     'ds_01' : document.getElementById("main--form_sqr"),
     'ds_02' : document.getElementById("main--form_crl"), 
     'ds_03' : document.getElementById("main--form_trg"),
     'ds_04' : document.getElementById("main--form_pgn")
 };
+
 
 let showButton = {
     'btn_01' : document.getElementById("activator_01"),
@@ -23,57 +32,62 @@ function addIterator(evento)
     let userSelection;
     switch (evento.target.id)
     {
+/* - - - - -  Primer Activador  - - - - - */        
         case 'activator_01':
-            console.log(evento.target.id);
             userSelection = "¡Un cuadrado!";
+            eraserFigureDraw();
             setTimeout(() => 
             {
-                display.ds_01.setAttribute("style", "opacity:1; margin-top: 0px;")
+                figureCanvas.setAttribute("style", "opacity:1; height: 300px;");
+                document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
+                display.ds_01.setAttribute("style", "opacity:1; margin-top: 0px;");
+                figureSplash.splash01.setAttribute("style", "opacity:1; margin-left: 0px;");
             }, 400);
-            document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
-            display.ds_02.setAttribute("style", "opacity:0; margin-top: 200px;");
-            display.ds_03.setAttribute("style", "opacity:0; margin-top: 200px;");
-            display.ds_04.setAttribute("style", "opacity:0; margin-top: 200px;");
+
             break;
 
+/* - - - - -  Segundo Activador  - - - - - */        
         case 'activator_02':
-            console.log(evento.target.id);
             userSelection = "¡Un círculo!";
+            eraserFigureDraw();
+            setTimeout(() => 
+            {
+                figureCanvas.setAttribute("style", "opacity:1; height: 300px;");
+                document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
+            }, 400);
             setTimeout(() => 
             {
                 display.ds_02.setAttribute("style", "opacity:1; margin-top: 0px;")
             }, 400);
-            document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
-            display.ds_01.setAttribute("style", "opacity:0; margin-top: 200px;");
-            display.ds_03.setAttribute("style", "opacity:0; margin-top: 200px;");
-            display.ds_04.setAttribute("style", "opacity:0; margin-top: 200px;");
-            break;
 
-        case 'activator_03':
-            console.log(evento.target.id);
-            userSelection = "¡Un triángulo!";
             setTimeout(() => 
             {
+                figureSplash.splash02.setAttribute("style", "opacity:1; margin-left: 0px;");
+            }, 400);
+            break;
+
+/* - - - - -  Tercer Activador  - - - - - */        
+        case 'activator_03':
+            userSelection = "¡Un triángulo!";
+            eraserFigureDraw();
+            setTimeout(() => 
+            {
+                figureCanvas.setAttribute("style", "opacity:1; height: 300px;");
+                document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
                 display.ds_03.setAttribute("style", "opacity:1; margin-top: 0px;")
             }, 400);
-            document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
-            display.ds_01.setAttribute("style", "opacity:0; margin-top: 200px;");
-            display.ds_02.setAttribute("style", "opacity:0; margin-top: 200px;");
-            display.ds_04.setAttribute("style", "opacity:0; margin-top: 200px;");
             break;
 
+/* - - - - -  Cuarto Activador  - - - - - */        
         case 'activator_04':
-            console.log(evento.target.id);
             userSelection = "¡Un pentágono!";
+            eraserFigureDraw();
             setTimeout(() => 
             {
-                display.ds_04
-                .setAttribute("style", "opacity:1; margin-top: 0px;")
+                figureCanvas.setAttribute("style", "opacity:1; height: 300px;");
+                document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
+                display.ds_04.setAttribute("style", "opacity:1; margin-top: 0px;");
             }, 400);
-            document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
-            display.ds_01.setAttribute("style", "opacity:0; margin-top: 200px;");
-            display.ds_02.setAttribute("style", "opacity:0; margin-top: 200px;");
-            display.ds_03.setAttribute("style", "opacity:0; margin-top: 200px;");
             break;
     }  
 }
@@ -146,3 +160,17 @@ function pentagonFeatures()
     document.getElementById("main--form__divInteractivo__input08").innerHTML = parseFloat(pnResult_02).toFixed(1);
     console.log(ap);
 }
+
+
+/* --- Funcion para limpiar el display */
+function eraserFigureDraw()
+    {
+        figureCanvas.setAttribute("style", "opacity:0; height: 0;");
+        display.ds_01.setAttribute("style", "opacity:0;");
+        display.ds_02.setAttribute("style", "opacity:0;");
+        display.ds_03.setAttribute("style", "opacity:0;");
+        display.ds_04.setAttribute("style", "opacity:0;");
+        figureSplash.splash01.setAttribute("style", "opacity:0; margin-left: -600px;");
+        figureSplash.splash02.setAttribute("style", "opacity:0; margin-left: -600px;");
+        
+    }

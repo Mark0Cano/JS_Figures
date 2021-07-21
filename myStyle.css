@@ -5,6 +5,7 @@ body {
     margin: 0;
 }
 
+/* ----Header Style ------*/
 .header {
     background: linear-gradient(to right, #8E2DE2, #4A00E0);
     width: 100%;
@@ -33,6 +34,9 @@ body {
     margin-bottom: -5px;
 }
 
+
+/* ----Central Style ------*/
+
 .main {
     width: 100%;
     height: auto;
@@ -44,51 +48,100 @@ body {
     align-items: center;
 }
 
+/* ----Container Style ------*/
 .main__container {
     background-color: #1d1d1d;
-    width: 450px;
-    height: 700PX;
+    width: 490px;
+    height: 600PX;
     border-radius: 20px;
     color: #ff71d0;
-    box-shadow: black;
-    padding: 20px;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 30px;
     box-sizing: border-box;
     position: relative;
-    overflow: hidden;
     font-size: 10pt;
 }
 
+.main__container__holder {
+    width: 490px;
+    height: 490PX;
+    overflow: scroll;
+    position: relative;
+    margin: auto; 
+}
+
+.main__container__holder::-webkit-scrollbar-track {
+    background: #1d1d1d;margin-right: 30px;
+    
+}
+
+.main__container__holder::-webkit-scrollbar-thumb {
+    background: #ffc038;
+    margin-right: 30px;
+}
+
+.main__container__holder::-webkit-scrollbar {
+    width:8px;
+    opacity: .5;
+}
+
+.main__container__holder::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+/* ----Figure Splash Display ------*/
 .main__container__display {
-    height: 270px;
     width: 270px;
     position: relative;
     border-top: 1px dashed #8E2DE2;
     border-bottom: 1px dashed #8E2DE2;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    height: 0;
+    transition: 300ms;
 }
 
+.main__container__display p {
+    align-self: flex-start;
+}
+
+
+/* ----Figure Splash Art ------*/
 .display--square {
     width: 200px;
     height: 200px;
+    position: absolute;
     background: linear-gradient(45deg, #00C9FF 0%, #92FE9D 100%);
     border-radius: 2px;
+    margin-top: 25px;
+    opacity: 0;
+    margin-left: -600px;
+    transform: 200ms;
 }
 
 .display--circle {
     width: 200px;
     height: 200px;
+    position: absolute;
     background: radial-gradient(ellipse at bottom, #f8ff00 0%, #3ad59f 100%);
     border-radius: 100px;
+    opacity: 0;
+    margin-left: -600px;
+    transform: 200ms;
 }
 
 .main__container--form {
-    margin-top: 10px;
     display: flex;
     justify-content: space-around;
+    height: 50px;
 }
 
 .main__form--button {
@@ -106,7 +159,7 @@ body {
 }
 
 .main__form--input {
-    background: transparent;
+    background: #363636;
     border: none;
     height: 30px;
     outline: none;
@@ -119,33 +172,24 @@ body {
     background-color: rgba(255, 255, 255, .1);
 }
 
-#main--form_sqr {
+.dataForm {
+    width: 490px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     opacity: 0;
     margin-top: 200px;
     transition: 350ms;
 }
 
-#main--form_crl {
-   position: absolute;
-   opacity: 0;
-   margin-top: 200px;
-   transition: 350ms;
+.dataForm__inputs {
+    margin-top: 15px;
 }
 
-#main--form_trg {
-    position: absolute;
-    opacity: 0;
-    margin-top: 200px;
-    transition: 350ms;
-}
-
-#main--form_pgn {
-    position: absolute;
-    opacity: 0;
-    margin-top: 200px;
-    transition: 350ms;
-}
 
 .container--parrafoInteractivo {
     color: #ff71d0;
@@ -155,4 +199,6 @@ body {
     display: flex;
     justify-content: center;
     color: #e0e0e0;
+    height: 80px;
+    position: relative;
 }
