@@ -59,6 +59,32 @@ body {
     font-size: 10pt;
 }
 
+.main__container__display {
+    height: 270px;
+    width: 270px;
+    position: relative;
+    border-top: 1px dashed #8E2DE2;
+    border-bottom: 1px dashed #8E2DE2;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display--square {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #00C9FF 0%, #92FE9D 100%);
+    border-radius: 2px;
+}
+
+.display--circle {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(ellipse at bottom, #f8ff00 0%, #3ad59f 100%);
+    border-radius: 100px;
+}
+
 .main__container--form {
     margin-top: 10px;
     display: flex;

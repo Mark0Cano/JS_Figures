@@ -87,7 +87,7 @@ let execute = {
 } 
 execute.ex_01.addEventListener("click", squareFeatures);
 execute.ex_02.addEventListener("click", circleFeatures);
-execute.ex_03.addEventListener("click", circleFeatures);
+execute.ex_03.addEventListener("click", triangleFeatures);
 execute.ex_04.addEventListener("click", pentagonFeatures);
 
 
@@ -96,11 +96,11 @@ execute.ex_04.addEventListener("click", pentagonFeatures);
 function squareFeatures()
 {
     const squareSide = document.getElementById("main--form--output_01");
-    side = parseInt(squareSide.value);
+    side = parseFloat(squareSide.value);
     sqResult_01 = side * 4;
     sqResult_02 = side ** 2;
-    document.getElementById("main--form__divInteractivo__input01").innerHTML = sqResult_01;
-    document.getElementById("main--form__divInteractivo__input02").innerHTML = sqResult_02;
+    document.getElementById("main--form__divInteractivo__input01").innerHTML = parseFloat(sqResult_01).toFixed(1);
+    document.getElementById("main--form__divInteractivo__input02").innerHTML = parseFloat(sqResult_02).toFixed(1);
 }
 
 /* --- Estructurando la funcion para calcular propiedades del Círculo */
@@ -108,22 +108,41 @@ function squareFeatures()
 function circleFeatures()
 {
     const radio = document.getElementById("main--form--output_02");
-    diameter = parseInt(radio.value * 2);
+    diameter = parseFloat(radio.value * 2);
     cqResult_01 = diameter * Math.PI;
     cqResult_02 = Math.PI * (radio.value ** 2);
-    document.getElementById("main--form__divInteractivo__input03").innerHTML = cqResult_01;
-    document.getElementById("main--form__divInteractivo__input04").innerHTML = cqResult_02;
+    document.getElementById("main--form__divInteractivo__input03").innerHTML = parseFloat(cqResult_01).toFixed(1);
+    document.getElementById("main--form__divInteractivo__input04").innerHTML = parseFloat(cqResult_02).toFixed(1);
 }
 
-/* --- Estructurando la funcion para calcular propiedades del Círculo */
+/* --- Estructurando la funcion para calcular propiedades del Triángulo */
+
+function triangleFeatures()
+{
+    const triSide = document.getElementById("main--form--output_03A");
+    const b = document.getElementById("main--form--output_03B");
+    triHipotenusa = parseInt(triSide.value);
+    base = parseFloat(b.value);
+    cOpuesto = base / 2;
+    cAdyacente = Math.sqrt((triHipotenusa ** 2) - (cOpuesto ** 2));
+    trResult_01 = base + (triHipotenusa * 2);
+    trResult_02 = (base * cAdyacente) / 2;
+    document.getElementById("main--form__divInteractivo__input05").innerHTML = parseFloat(trResult_01).toFixed(1);
+    document.getElementById("main--form__divInteractivo__input06").innerHTML = parseFloat(trResult_02).toFixed(1);
+    console.log('Esto es mi hipotenusa ' + triHipotenusa);
+    console.log('Esto es la base ' + base);
+    console.log('Esto es el Cateto Opuesto' + cOpuesto);
+}
+
+/* --- Estructurando la funcion para calcular propiedades del Pentágono */
 
 function pentagonFeatures()
 {
     const pSide = document.getElementById("main--form--output_04");
-    ap = parseInt(pSide.value / 1.45);
+    ap = parseFloat(pSide.value / 1.45);
     pnResult_01 = pSide.value * 5;
     pnResult_02 = (pSide.value * 2 * ap)/2;
-    document.getElementById("main--form__divInteractivo__input07").innerHTML = pnResult_01;
-    document.getElementById("main--form__divInteractivo__input08").innerHTML = pnResult_02;
+    document.getElementById("main--form__divInteractivo__input07").innerHTML = parseFloat(pnResult_01).toFixed(1);
+    document.getElementById("main--form__divInteractivo__input08").innerHTML = parseFloat(pnResult_02).toFixed(1);
     console.log(ap);
 }

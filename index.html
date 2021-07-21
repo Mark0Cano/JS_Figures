@@ -26,6 +26,10 @@
                 <button class="main__form--button" id="activator_04" type="button">Pentágono</button>
             </form>
             <p>Muy bien has elegido: <p id="container--parrafoInteractivo"></p></p>
+            <!----          Square form drawing         ---->
+            <div class="main__container__display">
+                <div class="display--square"></div>
+            </div>
             <!----          Square form          ---->
             <form id="main--form_sqr">
                 <label for="">Porfavor introduce la longitud de un lado de tu cuadrado</label>
@@ -40,6 +44,11 @@
                     <div id="main--form__divInteractivo__input02"></div>
                 </div>
             </form>
+
+            <!----          Circle form drawing         ---->
+            <div class="main__container__display">
+                <div class="display--circle"></div>
+            </div>
             <!----          Circle form          ---->
             <form id="main--form_crl">
                 <label for="">Porfavor introduce el radio de tu círculo</label>
@@ -57,14 +66,16 @@
             <!----          Triangle form          ---->
             <form id="main--form_trg">
                 <label for="">Porfavor introduce la longitud de un lado de tu trinángulo</label>
-                <input id="main--form--output_03" type="text" class="main__form--input">
+                <input id="main--form--output_03A" type="text" class="main__form--input">
+                <label for="">Ahora introduce la medida de la base de tu trinángulo</label>
+                <input id="main--form--output_03B" type="text" class="main__form--input">
                 <button id="main--form--button_03" class="main__form--button_2" type="button">Calcular</button>
                 <h3>Características</h3>
                 <div class="main--form__divInteractivo">
-                    <p>Este valor corresponde al Perímetro de tu cuadrado</p>
+                    <p>Este valor corresponde al Perímetro de tu triángulo</p>
                     <div id="main--form__divInteractivo__input05"></div>
                     
-                    <p>Este valor corresponde al Área de tu cuadrado</p>
+                    <p>Este valor corresponde al Área de tu triángulo</p>
                     <div id="main--form__divInteractivo__input06"></div>
                 </div>
             </form>
