@@ -41,8 +41,14 @@ function addIterator(evento)
                 figureCanvas.setAttribute("style", "opacity:1; height: 300px;");
                 document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
                 display.ds_01.setAttribute("style", "opacity:1; margin-top: 0px;");
-                figureSplash.splash01.setAttribute("style", "opacity:1; margin-left: 0px;");
+                
             }, 400);
+
+            setTimeout(() =>
+            {
+                figureSplash.splash01.setAttribute("style", "opacity:1; margin-left: 0px;");
+            }, 600
+            );
 
             break;
 
@@ -63,7 +69,7 @@ function addIterator(evento)
             setTimeout(() => 
             {
                 figureSplash.splash02.setAttribute("style", "opacity:1; margin-left: 0px;");
-            }, 400);
+            }, 600);
             break;
 
 /* - - - - -  Tercer Activador  - - - - - */        
@@ -133,19 +139,30 @@ function circleFeatures()
 
 function triangleFeatures()
 {
-    const triSide = document.getElementById("main--form--output_03A");
-    const b = document.getElementById("main--form--output_03B");
-    triHipotenusa = parseInt(triSide.value);
-    base = parseFloat(b.value);
-    cOpuesto = base / 2;
-    cAdyacente = Math.sqrt((triHipotenusa ** 2) - (cOpuesto ** 2));
-    trResult_01 = base + (triHipotenusa * 2);
-    trResult_02 = (base * cAdyacente) / 2;
-    document.getElementById("main--form__divInteractivo__input05").innerHTML = parseFloat(trResult_01).toFixed(1);
-    document.getElementById("main--form__divInteractivo__input06").innerHTML = parseFloat(trResult_02).toFixed(1);
-    console.log('Esto es mi hipotenusa ' + triHipotenusa);
-    console.log('Esto es la base ' + base);
-    console.log('Esto es el Cateto Opuesto' + cOpuesto);
+    const triSideA = document.getElementById("main--form--output_03B");
+    const triSideB = document.getElementById("main--form--output_03C");
+    const b = document.getElementById("main--form--output_03A");
+    triHipotenusa = parseFloat(triSideA.value);
+    sideDos = parseFloat(triSideB.value);
+    if(triHipotenusa == sideDos)
+    {
+        
+        base = parseFloat(b.value);
+        cOpuesto = base / 2;
+        cAdyacente = Math.sqrt((triHipotenusa ** 2) - (cOpuesto ** 2));
+        trResult_01 = base + (triHipotenusa * 2);
+        trResult_02 = (base * cAdyacente) / 2;
+        document.getElementById("main--form__divInteractivo__input05").innerHTML = parseFloat(trResult_01).toFixed(1);
+        document.getElementById("main--form__divInteractivo__input06").innerHTML = parseFloat(trResult_02).toFixed(1);
+        console.log('Esto es mi hipotenusa ' + triHipotenusa);
+        console.log('Esto es la base ' + base);
+        console.log('Esto es el Cateto Opuesto' + cOpuesto);
+    }
+        else 
+        {
+            alert("Tu triangulo isóseles no tiene las medidas adecuadas >:v")
+        }
+    
 }
 
 /* --- Estructurando la funcion para calcular propiedades del Pentágono */
@@ -170,7 +187,10 @@ function eraserFigureDraw()
         display.ds_02.setAttribute("style", "opacity:0;");
         display.ds_03.setAttribute("style", "opacity:0;");
         display.ds_04.setAttribute("style", "opacity:0;");
-        figureSplash.splash01.setAttribute("style", "opacity:0; margin-left: -600px;");
-        figureSplash.splash02.setAttribute("style", "opacity:0; margin-left: -600px;");
-        
+        setTimeout(() =>
+            {
+                figureSplash.splash01.setAttribute("style", "opacity:0; margin-left: -600px;");
+                figureSplash.splash02.setAttribute("style", "opacity:0; margin-left: -600px;");
+            }, 200
+        );
     }

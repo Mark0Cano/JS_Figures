@@ -124,7 +124,7 @@ body {
     margin-top: 25px;
     opacity: 0;
     margin-left: -600px;
-    transform: 200ms;
+    transition: 200ms;
 }
 
 .display--circle {
@@ -135,7 +135,7 @@ body {
     border-radius: 100px;
     opacity: 0;
     margin-left: -600px;
-    transform: 200ms;
+    transition: 200ms;
 }
 
 .main__container--form {
