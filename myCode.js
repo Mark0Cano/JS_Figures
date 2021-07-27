@@ -1,10 +1,12 @@
 /* --- Trayendo el display al usuario */
 
 let figureCanvas = document.getElementById("mcDisplay");
+
 let figureSplash = {
     'splash01' : document.getElementById('squareDraw'),
-    'splash02' : document.getElementById('circleDraw')
-
+    'splash02' : document.getElementById('circleDraw'),
+    'splash03' : document.getElementById('triangleDraw'),
+    'splash04' : document.getElementById('pentaDraw')
 };
 
 let display = {
@@ -47,7 +49,7 @@ function addIterator(evento)
             setTimeout(() =>
             {
                 figureSplash.splash01.setAttribute("style", "opacity:1; margin-left: 0px;");
-            }, 600
+            }, 700
             );
 
             break;
@@ -69,7 +71,7 @@ function addIterator(evento)
             setTimeout(() => 
             {
                 figureSplash.splash02.setAttribute("style", "opacity:1; margin-left: 0px;");
-            }, 600);
+            }, 700);
             break;
 
 /* - - - - -  Tercer Activador  - - - - - */        
@@ -80,8 +82,15 @@ function addIterator(evento)
             {
                 figureCanvas.setAttribute("style", "opacity:1; height: 300px;");
                 document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
-                display.ds_03.setAttribute("style", "opacity:1; margin-top: 0px;")
+                display.ds_03.setAttribute("style", "opacity:1; margin-top: 0px;");
+                
             }, 400);
+
+            setTimeout(() =>
+            {
+                figureSplash.splash03.setAttribute("style", "opacity:1; margin-left: 0px;");
+            }, 700
+            );
             break;
 
 /* - - - - -  Cuarto Activador  - - - - - */        
@@ -94,6 +103,12 @@ function addIterator(evento)
                 document.getElementById('container--parrafoInteractivo').innerHTML = userSelection;
                 display.ds_04.setAttribute("style", "opacity:1; margin-top: 0px;");
             }, 400);
+
+            setTimeout(() =>
+            {
+                figureSplash.splash04.setAttribute("style", "opacity:1; margin-left: 0px;");
+            }, 700
+            );
             break;
     }  
 }
@@ -189,8 +204,10 @@ function eraserFigureDraw()
         display.ds_04.setAttribute("style", "opacity:0;");
         setTimeout(() =>
             {
-                figureSplash.splash01.setAttribute("style", "opacity:0; margin-left: -600px;");
-                figureSplash.splash02.setAttribute("style", "opacity:0; margin-left: -600px;");
-            }, 200
+                figureSplash.splash01.setAttribute("style", "opacity:0; margin-left: -300px;");
+                figureSplash.splash02.setAttribute("style", "opacity:0; margin-left: -300px;");
+                figureSplash.splash03.setAttribute("style", "opacity:0; margin-left: -300px;");
+                figureSplash.splash04.setAttribute("style", "opacity:0; margin-left: -300px;");
+            }, 300
         );
     }

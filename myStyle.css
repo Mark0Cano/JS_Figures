@@ -123,8 +123,8 @@ body {
     border-radius: 2px;
     margin-top: 25px;
     opacity: 0;
-    margin-left: -600px;
-    transition: 200ms;
+    margin-left: -300px;
+    transition: 150ms;
 }
 
 .display--circle {
@@ -134,8 +134,49 @@ body {
     background: radial-gradient(ellipse at bottom, #f8ff00 0%, #3ad59f 100%);
     border-radius: 100px;
     opacity: 0;
-    margin-left: -600px;
-    transition: 200ms;
+    margin-left: -300px;
+    transition: 150ms;
+}
+
+.display--triangle {
+    width: 0;
+    height: 0;
+    border-right: 80px solid transparent;
+    border-top: 80px solid transparent;
+    border-left: 80px solid transparent;
+    border-bottom: 180px solid #f0ad4e;
+    position: absolute;
+    background: radial-gradient(ellipse at top, #efd5ff 0%, #515ada 100%);
+    opacity: 0;
+    margin-left: -300px;
+    transition: 150ms;
+}
+
+.display--pentaA {
+    width: 100px;
+    height: 0px;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-top: 85px solid #428bca;
+    position: relative;
+}
+
+.display--pentaB {
+    width: 0;
+     height: 0;
+     border-right: 90px solid transparent;
+     border-top: 40px solid transparent;
+     border-left: 90px solid transparent;
+     border-bottom: 80px solid #428bca;
+     position: relative;
+}
+
+.display--penta {
+    position: absolute;
+    
+    opacity: 0;
+    margin-left: -300px;
+    transition: 150ms;
 }
 
 .main__container--form {
@@ -188,6 +229,12 @@ body {
 
 .dataForm__inputs {
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main--form__divInteractivo {
+    margin-top: 25px;
 }
 
 
